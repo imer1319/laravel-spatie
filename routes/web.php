@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('users/password','UserController@password')->name('users.password');
+Route::post('user/updatepassword','UserController@updatePassword')->name('users.updatepassword');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware('auth')->group(function(){

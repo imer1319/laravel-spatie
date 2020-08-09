@@ -32,6 +32,7 @@
                                     @endcan
                                 </td>
                                 <td width="10px">
+                                    @if($user->id != 1)
                                     @can('users.destroy')
                                     <form action="{{ route('users.destroy',$user->id) }}" method="POST">
                                         @csrf
@@ -39,6 +40,7 @@
                                         <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
                                     </form>
                                     @endcan
+                                    @endif
                                 </td>
                             </tr>
                             @endforeach

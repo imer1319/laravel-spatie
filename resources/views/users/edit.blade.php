@@ -5,7 +5,10 @@
 	<div class="row justify-content-center">
 		<div class="col-md-8">
 			<div class="card">
-				<div class="card-header">Editar</div>
+				<div class="card-header">
+					Editar
+					<a class="btn btn-info btn-sm float-right text-white" href="{{ route('users.password') }}"> Cambiar contraseña</a>
+				</div>
 
 				<div class="card-body">
 					<form action="{{ route('users.update',$user->id) }}" method="POST">
@@ -14,6 +17,10 @@
 						<div class="form-group">
 							<label for="nombre">Nombre</label>
 							<input type="text" class="form-control" name="name" value="{{ $user->name }}"placeholder="nombre">
+						</div>
+						<div class="form-group">
+							<label for="nombre">Email</label>
+							<input type="emil" class="form-control" name="email" value="{{ $user->email }}"placeholder="nombre">
 						</div>
 						<hr>
 						<h3>Lista de roles</h3>
